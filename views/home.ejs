@@ -1,0 +1,273 @@
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <!-- Acessibilidade na Web -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="description" content="BugTracker | Sistema de Reporte de Bugs">
+      <meta name="author" content="Lucas Gomes">
+     
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="pt_BR">
+      <meta property="og:title" content="BugTracker | Sistema de Reporte de Bugs ">
+      <meta property="og:description" content="BugTracker | Sistema de Reporte de Bugs">
+  
+      <title>BugTracker | Sistema de Reporte de Bugs</title>
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" sizes="180x180" href="https://marcelopereira.dev/images/favicons/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="https://marcelopereira.dev/images/favicons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="https://marcelopereira.dev/images/favicons/favicon-16x16.png">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+      <!-- Styles Bootstrap 4.3 -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+      <script>
+          // Navegador + relógio
+          document.onreadystatechange = () => {
+              if (document.readyState === 'interactive') {
+                  document.getElementById('userAgent').value = window.navigator.userAgent
+                  document.getElementById('userDate').value = new Date()
+              }
+          }
+      </script>
+  
+  
+      <style>
+          /*************************************
+              F O O T E R
+          *************************************/
+
+          ul {
+              padding: 0;
+              list-style: none;
+          }
+  
+          footer {
+              background-color: #343A40;
+          }
+  
+          footer p {
+              font-size: .9rem;
+              color: #999;
+          }
+  
+          footer nav ul {
+              max-width: 280px;
+              margin: 0 auto;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-around;
+          }
+  
+          /* Ícones Redes Sociais */
+          .c-link--behance:hover {
+              color: #1666F7;
+          }
+  
+          .c-link--facebook:hover {
+              color: #3b5998;
+          }
+  
+          .c-link--github:hover {
+              color: #EA4E2E;
+          }
+  
+          .c-link--linkedin:hover {
+              color: #0077B5;
+          }
+  
+          .c-link--instagram:hover {
+              color: #8134AF;
+          }
+  
+          .c-link--behance:hover::after {
+              background: #1666F7;
+          }
+  
+          .c-link--facebook:hover::after {
+              background: #3b5998;
+          }
+  
+          .c-link--github:hover::after {
+              background: #EA4E2E;
+          }
+  
+          .c-link--linkedin:hover::after {
+              background: #0077B5;
+          }
+  
+          .c-link--instagram:hover::after {
+              background: #8134AF;
+          }
+  
+          .c-link {
+              position: relative;
+              color: #999;
+          }
+  
+          .c-link:not(:last-of-type) {
+              margin-right: 15px;
+          }
+  
+          .c-tooltip::before,
+          .c-tooltip::after {
+              display: block;
+              position: absolute;
+              left: 50%;
+              -webkit-transform: translate(-50%, -10px);
+              transform: translate(-50%, -10px);
+              opacity: 0;
+              transition: .2s;
+          }
+  
+          .c-tooltip::before {
+              content: '';
+              bottom: calc(100% + 2px);
+              border: solid 5px transparent;
+              border-top-color: currentColor;
+          }
+  
+          .c-tooltip::after {
+              content: attr(aria-label);
+              bottom: calc(100% + 12px);
+              padding: .61em .93em;
+              font-size: .875rem;
+              color: #FFF;
+              border-radius: 3px;
+          }
+  
+          .c-tooltip:hover::before,
+          .c-tooltip:hover::after {
+              opacity: 1;
+              -webkit-transform: translate(-50%);
+              transform: translate(-50%);
+          }
+  
+          footer nav ul li {
+              font-size: 1.8rem;
+              padding: 10px;
+          }
+  
+          .creditos {
+              margin-bottom: 30px;
+          }
+  
+          .creditos a {
+              color: #17a2b8;
+              opacity: 0.8;
+              text-decoration: none;
+          }
+  
+          .creditos a:hover {
+              color: #0d8597;
+          }
+  
+          .creditos span {
+              font-weight: bold;
+          }
+      </style>
+  
+  </head>
+  <body>
+    
+      <!-- NavBar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow mb-5">
+          <div class="container">
+              <a class="navbar-brand" href="">Bug<strong>Tracker</strong><small> | by Lucas Gomes</small></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="outline: none">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+  
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto text-center">
+                      <li class="nav-item active">
+                          <a class="nav-link" href="/" target="_blank">Visitar site</a>
+                      </li>
+                      <!-- Link Login -->
+                      <li class="nav-item">
+                          <a href="https://github.com/lucasgomescosta" target="_blank" class="btn btn-outline-light px-3 py-2"><i class="fab fa-github"></i> GitHub</a>
+                      </li>
+                      <!-- Fim Link Login -->
+                  </ul>
+                </div>
+            </div>
+        </nav>
+  <div class="container  col-lg-6">  
+      <h1>Reports de Bugs</h1>
+      <p>Por Favor preencha todos os dados. </p>
+
+      <hr class="mb-5">
+
+      <form method="POST">
+        <div class="form-group">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" class="form-control" required=""/>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="text" id="email" name="email" class="form-control" required=""/>
+        </div>
+
+        <div class="form-group">
+          <label for="issueType">Classificação</label>
+          <select class="form-control"  id="issueType" name="issueType" required="">
+            <option value="">Selecione</option>
+            <option value="CRITICAL">Crítico</option>
+            <option value="BUG">Falha</option>
+            <option value="ENHANCEMENT">Melhoria</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="howToReproduce">Como reproduzir o erro?</label>
+          <input type="text" id="howToReproduce" class="form-control" name="howToReproduce" />
+        </div>
+
+        <div class="form-group">
+          <label for="expectedOutput">A saída esperada?</label>
+          <textarea id="expectedOutput" class="form-control" name="expectedOutput" required=""></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="receiveOutput">A saída recebida?</label>
+          <textarea id="receiveOutput" class="form-control" name="receiveOutput" required=""></textarea>
+        </div>
+
+
+        <input type="hidden" id="userAgent" name="userAgent" />
+        <input type="hidden" id="userDate" name="userDate" />
+    
+          <button  type="submit" class="btn btn-info btn-block shadow"> Enviar solicitação</button>
+    
+      </form>
+      <footer class="container-fluid  text-center py-5">
+          <aside>
+              <nav>
+                  <ul class="d-flex justify-content-center">
+                      <li>
+                          <a href="https://github.com/lucasgomescosta" target="_blank" class="c-link c-link--github c-tooltip" aria-label="GitHub">
+                              <i class="fab fa-github"></i>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="https://www.linkedin.com/in/lucas-gomes-843779111/" target="_blank" class="c-link c-link--linkedin c-tooltip" aria-label="Linkedin">
+                              <i class="fab fa-linkedin-in"></i>
+                          </a>
+                      </li>
+                  </ul>
+              </nav>
+          </aside>
+          <div class="container creditos">
+              <p>© 2019 | Desenvolvido com <span>♥</span> por 
+                      <span>Lucas Gomes</span></a> e hospedado em <a href="https://zeit.co/" target="_blank"><span>ZEIT Now</span></a>.
+              </p>
+          </div>
+      </footer>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+  </div>
+  </body>
+</html>
